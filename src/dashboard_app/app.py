@@ -187,7 +187,7 @@ def forecast_router(series: pd.Series, country: str, horizon: int, model_choice:
 
 
 def main():
-    st.title("Global CO₂ Emission Intelligence Dashboard")
+    st.title("Global CO₂ Emission Analytics Dashboard")
 
     df = prepare_core_frame()
     countries = sorted(df["country"].unique())

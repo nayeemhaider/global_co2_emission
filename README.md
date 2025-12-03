@@ -1,4 +1,4 @@
-# CO₂ Emission Intelligence Suite
+# CO₂ Emission Analytics
 
 This project is an end-to-end analytics and forecasting toolkit built on a global **CO₂ emissions by country** dataset from Kaggle.
 
