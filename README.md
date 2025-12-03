@@ -2,7 +2,7 @@
 
 This project is an end-to-end analytics and forecasting toolkit built on a global **CO₂ emissions by country** dataset from Kaggle.
 
-It is designed as a portfolio-ready, consultancy-style project that shows how to go from **raw CSV** to:
+Features of this work:
 
 - Cleaned and standardized dataset  
 - Exploratory data analysis (EDA)  
@@ -363,6 +363,7 @@ They are meant to be readable, teaching-style analyses that reuse the core code.
 
 # Run the Streamlit dashboard
     streamlit run src/dashboard_app/app.py
+
 
 
 
