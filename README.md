@@ -327,11 +327,11 @@ All notebooks live in notebooks/ and call into the src/ modules:
 They are meant to be readable, teaching-style analyses that reuse the core code.
 
 # Dashboard Overview
-![Dashboard Preview](./data/dashboard_image/Dashboard Preview.JPG)
-![Top 10 Emitters](./data/dashboard_image/Top 10 Emitters.JPG)
-![Particular Country Emission History](./data/dashboard_image/Particular Country Emission History.JPG)
-![Forecast Preview](./data/dashboard_image/Forecast Preview.JPG)
-![Risk Index](./data/dashboard_image/Risk Index.JPG)
+![Dashboard Preview](./data/dashboard_image/dashboard_preview.JPG)
+![Top 10 Emitters](./data/dashboard_image/top_10_emitters.JPG)
+![Particular Country Emission History](./data/dashboard_image/particular_country_emission_history.JPG)
+![Forecast Preview](./data/dashboard_image/forecast_preview.JPG)
+![Risk Index](./data/dashboard_image/risk_index.JPG)
 
 
 # To use
