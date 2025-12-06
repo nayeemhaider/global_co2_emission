@@ -6,7 +6,7 @@ Features of this work:
 
 - Cleaned and standardized dataset  
 - Exploratory data analysis (EDA)  
-- Time-series forecasting (ARIMA, Prophet, LSTM)  
+- Time-series forecasting (ARIMA)  
 - Country-level clustering  
 - Global anomaly detection  
 - Climate risk scoring  
@@ -33,26 +33,19 @@ global_co2_emission/
         risk_index.py
         report_generator.py
         train_models.py
-        train_prophet_models.py
-        train_lstm_models.py
         dashboard_app/
             app.py
     models/
         arima/
             arima_model.py
             <Country>_arima.pkl   (after training)
-        prophet/
-            prophet_model.py
-            <Country>_prophet.pkl (after training)
-        lstm/
-            lstm_model.py
-            <Country>_lstm.pt     (after training)
     notebooks/
         01 eda.ipynb
         02 forecasting.ipynb
         03 clustering.ipynb
         04 anomaly_detection.ipynb
         05 risk_index.ipynb
+        06 model_comparison.ipynb
     reports/
         country_reports/
         global_summary/
@@ -162,7 +155,7 @@ Top emitters over time
 
 Heatmap of emissions for top countries
 
-## 4.3 Forecasting (ARIMA / Prophet / LSTM)
+## 4.3 Forecasting (ARIMA)
 
 ARIMA and utility functions are in src/forecasting.py.
 Model wrappers live in models/arima/, models/prophet/, models/lstm/.
@@ -176,20 +169,13 @@ df = prepare_core_frame()
 series = prepare_country_series(df, "Germany")
 mean, lower, upper = arima_forecast(series, steps=10)
 
-
 To pre-train and save models for all countries:
 
 python -m src.train_models           # ARIMA per country
-python -m src.train_prophet_models   # Prophet per country (requires prophet)
-python -m src.train_lstm_models      # LSTM global
-
 
 Saved models appear in:
 
 models/arima/<Country>_arima.pkl
-models/prophet/<Country>_prophet.pkl
-models/lstm/<Country>_lstm.pt
-
 
 The Streamlit dashboard will use these if present, otherwise it will train a model on-the-fly for the selected country.
 
@@ -339,15 +325,9 @@ They are meant to be readable, teaching-style analyses that reuse the core code.
     python -m src.eda from terminal 
     or via notebook notebooks/01_eda.ipynb
 
-# Forecasting (ARIMA / Prophet / LSTM)
+# Forecasting (ARIMA)
     ARIMA models:
         python -m src.train_models
- 
-    Prophet models:
-        python -m src.train_prophet_models
-
-    LSTM models:
-        python -m src.train_lstm_models
     
     Or via notebook notebooks/02_forecasting.ipynb
 

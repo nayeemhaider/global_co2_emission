@@ -105,4 +105,4 @@ def generate_country_report(country: str, horizon: int = 10):
 
 if __name__ == "__main__":
     # Example usage: generate a report for Germany
-    generate_country_report("Bangladesh", horizon=10)
+    generate_country_report("United States", horizon=10)
